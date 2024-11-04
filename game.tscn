@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c3lxx6ljbivfl"]
+
+[ext_resource type="Texture2D" uid="uid://bfgndd2dnf8ui" path="res://MainMenu/Backgound.png" id="1_rrx8i"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Backgound" type="Sprite2D" parent="."]
+position = Vector2(408, 269)
+texture = ExtResource("1_rrx8i")
