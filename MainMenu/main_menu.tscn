@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://chh3b315m8mbv"]
+[gd_scene load_steps=6 format=3 uid="uid://chh3b315m8mbv"]
 
 [ext_resource type="Texture2D" uid="uid://bfgndd2dnf8ui" path="res://MainMenu/Backgound.png" id="1_axkb5"]
 [ext_resource type="Script" path="res://MainMenu/main_menu.gd" id="1_q1sey"]
+[ext_resource type="PackedScene" uid="uid://baj25pfs3tqdj" path="res://MainMenu/options_menu.tscn" id="3_62uqp"]
 
 [sub_resource type="SystemFont" id="SystemFont_wea5h"]
 font_names = PackedStringArray("Impact")
@@ -83,6 +84,17 @@ text = "Start
 [node name="Seperator3" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
+[node name="OptionsButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_upuj8")
+theme_override_font_sizes/font_size = 24
+text = "Options
+"
+
+[node name="Seperator4" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
 [node name="ExitButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(120, 32)
 layout_mode = 2
@@ -91,13 +103,6 @@ theme_override_font_sizes/font_size = 24
 text = "Quit
 "
 
-[node name="Seperator4" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="SettingsButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
-custom_minimum_size = Vector2(120, 32)
-layout_mode = 2
-theme_override_fonts/font = SubResource("SystemFont_upuj8")
-theme_override_font_sizes/font_size = 24
-text = "Settings
-"
+[node name="Options_Menu" parent="." instance=ExtResource("3_62uqp")]
+visible = false
+layout_mode = 1
