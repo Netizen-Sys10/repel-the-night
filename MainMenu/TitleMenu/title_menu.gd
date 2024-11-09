@@ -1,6 +1,7 @@
 class_name TitleMenu
 
 extends Control
+
 @onready var start_button = $MarginContainer/HBoxContainer/VBoxContainer/StartButton as Button
 @onready var exit_button = $MarginContainer/HBoxContainer/VBoxContainer/ExitButton as Button
 @onready var options_button = $MarginContainer/HBoxContainer/VBoxContainer/OptionsButton as Button
