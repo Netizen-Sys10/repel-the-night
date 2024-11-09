@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://cv4imsp08kwco"]
+[gd_scene load_steps=9 format=3 uid="uid://cv4imsp08kwco"]
 
 [ext_resource type="PackedScene" uid="uid://n4nq2n6f3lir" path="res://MainMenu/OptionsMenu/Buttons/hotkey_rebind_button.tscn" id="1_bx2pw"]
 [ext_resource type="PackedScene" uid="uid://d3iy7ux7w51up" path="res://MainMenu/OptionsMenu/Buttons/window_mode_button.tscn" id="1_cqmde"]
 [ext_resource type="PackedScene" uid="uid://d0nlfmh0xv0kb" path="res://MainMenu/OptionsMenu/Buttons/resolution_display_button.tscn" id="2_fwd5x"]
 [ext_resource type="PackedScene" uid="uid://sufoanc0k8ns" path="res://MainMenu/OptionsMenu/Buttons/audio_slider_settings.tscn" id="4_q4cvf"]
+[ext_resource type="PackedScene" uid="uid://des0tgnrdbbl0" path="res://MainMenu/OptionsMenu/Buttons/subtitles_toggle_button.tscn" id="5_k25dl"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0vvrj"]
 
@@ -31,7 +32,7 @@ offset_bottom = -100.0
 grow_horizontal = 2
 grow_vertical = 2
 tab_alignment = 1
-current_tab = 2
+current_tab = 3
 
 [node name="Graphics" type="TabBar" parent="TabContainer"]
 visible = false
@@ -109,6 +110,7 @@ theme_override_constants/separation = 12
 theme_override_styles/separator = SubResource("StyleBoxEmpty_sbdns")
 
 [node name="Sound" type="TabBar" parent="TabContainer"]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 2
 
@@ -144,7 +146,6 @@ layout_mode = 2
 bus_name = "Sfx"
 
 [node name="Accessability" type="TabBar" parent="TabContainer"]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 3
 
@@ -160,23 +161,11 @@ theme_override_constants/margin_top = 24
 theme_override_constants/margin_right = 24
 theme_override_constants/margin_bottom = 24
 
-[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Accessability/MarginContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Accessability/MarginContainer"]
 layout_mode = 2
-theme_override_constants/separation = 64
-alignment = 1
 
-[node name="Label" type="Label" parent="TabContainer/Accessability/MarginContainer/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Accessability/MarginContainer/ScrollContainer"]
 layout_mode = 2
-text = "123456"
 
-[node name="Label2" type="Label" parent="TabContainer/Accessability/MarginContainer/VBoxContainer"]
+[node name="Subtitles_Toggle_Button" parent="TabContainer/Accessability/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("5_k25dl")]
 layout_mode = 2
-text = "123456"
-
-[node name="Label3" type="Label" parent="TabContainer/Accessability/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "123456"
-
-[node name="Label4" type="Label" parent="TabContainer/Accessability/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "123456"
