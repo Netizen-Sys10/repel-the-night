@@ -1,6 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://cv4imsp08kwco"]
+[gd_scene load_steps=7 format=3 uid="uid://cv4imsp08kwco"]
 
-[ext_resource type="PackedScene" uid="uid://n4nq2n6f3lir" path="res://MainMenu/OptionsMenu/hotkey_rebind_button.tscn" id="1_bx2pw"]
+[ext_resource type="PackedScene" uid="uid://n4nq2n6f3lir" path="res://MainMenu/OptionsMenu/Buttons/hotkey_rebind_button.tscn" id="1_bx2pw"]
+[ext_resource type="PackedScene" uid="uid://d3iy7ux7w51up" path="res://MainMenu/OptionsMenu/Buttons/window_mode_button.tscn" id="1_cqmde"]
+[ext_resource type="PackedScene" uid="uid://d0nlfmh0xv0kb" path="res://MainMenu/OptionsMenu/Buttons/resolution_display_button.tscn" id="2_fwd5x"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0vvrj"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fp6db"]
 
@@ -26,7 +30,7 @@ offset_bottom = -100.0
 grow_horizontal = 2
 grow_vertical = 2
 tab_alignment = 1
-current_tab = 2
+current_tab = 1
 
 [node name="Sound" type="TabBar" parent="TabContainer"]
 visible = false
@@ -67,7 +71,6 @@ layout_mode = 2
 text = "Sound 4"
 
 [node name="Graphics" type="TabBar" parent="TabContainer"]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 
@@ -83,28 +86,25 @@ theme_override_constants/margin_top = 24
 theme_override_constants/margin_right = 24
 theme_override_constants/margin_bottom = 24
 
-[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Graphics/MarginContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Graphics/MarginContainer"]
 layout_mode = 2
-theme_override_constants/separation = 64
-alignment = 1
 
-[node name="Label" type="Label" parent="TabContainer/Graphics/MarginContainer/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Graphics/MarginContainer/ScrollContainer"]
 layout_mode = 2
-text = "123456"
 
-[node name="Label2" type="Label" parent="TabContainer/Graphics/MarginContainer/VBoxContainer"]
+[node name="Window_mode_button" parent="TabContainer/Graphics/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("1_cqmde")]
 layout_mode = 2
-text = "123456"
 
-[node name="Label3" type="Label" parent="TabContainer/Graphics/MarginContainer/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="TabContainer/Graphics/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-text = "123456"
+theme_override_constants/separation = 128
+theme_override_styles/separator = SubResource("StyleBoxEmpty_0vvrj")
 
-[node name="Label4" type="Label" parent="TabContainer/Graphics/MarginContainer/VBoxContainer"]
+[node name="Resolution_Display_button" parent="TabContainer/Graphics/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_fwd5x")]
 layout_mode = 2
-text = "123456"
 
 [node name="Controls" type="TabBar" parent="TabContainer"]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 2
 
