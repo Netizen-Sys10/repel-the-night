@@ -14,6 +14,7 @@ func _ready():
 	set_action_name()
 	set_text_for_key()
 
+
 func set_action_name() -> void:
 	label.text = "Unassigned"
 	
@@ -24,17 +25,13 @@ func set_action_name() -> void:
 			label.text = "Move Right"
 			
 
+
 func set_text_for_key() -> void:
 	var action_events = InputMap.action_get_events(action_name)
 	var action_event = action_events[0]
 	var action_keycode = OS.get_keycode_string(action_event.physical_keycode)
 	
 	button.text = "%s" % action_keycode
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
 
 
 func _on_button_toggled(button_pressed):
@@ -54,6 +51,7 @@ func _on_button_toggled(button_pressed):
 				i.set_process_unhandled_key_input(false)
 			
 		set_text_for_key()
+
 
 func _unhandled_key_input(event):
 	rebind_action_key(event)
