@@ -3,8 +3,14 @@ extends Control
 
 @onready var exit_button = $MarginContainer/VBoxContainer/Exit_Button as Button
 
-
 signal exit_options_menu
+
+
+func enter() -> void:
+	pass
+
+func exit() -> void:
+	pass
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

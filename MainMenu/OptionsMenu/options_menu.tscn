@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://baj25pfs3tqdj"]
 
-[ext_resource type="Script" path="res://MainMenu/options_menu.gd" id="1_i2rir"]
-[ext_resource type="PackedScene" uid="uid://cv4imsp08kwco" path="res://MainMenu/settings_tab_container.tscn" id="2_7gnfq"]
+[ext_resource type="Script" path="res://MainMenu/OptionsMenu/options_menu.gd" id="1_i2rir"]
+[ext_resource type="PackedScene" uid="uid://cv4imsp08kwco" path="res://MainMenu/OptionsMenu/settings_tab_container.tscn" id="2_7gnfq"]
 
 [sub_resource type="SystemFont" id="SystemFont_ug5of"]
 font_names = PackedStringArray("Impact")
