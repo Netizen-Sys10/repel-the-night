@@ -17,7 +17,6 @@ theme_override_constants/separation = 160
 [node name="Label" type="Label" parent="HBoxContainer"]
 custom_minimum_size = Vector2(264, 0)
 layout_mode = 2
-theme_override_font_sizes/font_size = 32
 text = "Base_Label"
 vertical_alignment = 1
 

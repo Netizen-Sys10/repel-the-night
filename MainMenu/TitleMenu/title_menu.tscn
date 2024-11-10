@@ -1,10 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://c3k364mkr82y4"]
+[gd_scene load_steps=3 format=3 uid="uid://c3k364mkr82y4"]
 
 [ext_resource type="Texture2D" uid="uid://bfgndd2dnf8ui" path="res://MainMenu/Common/Backgound.png" id="1_axkb5"]
 [ext_resource type="Script" path="res://MainMenu/TitleMenu/title_menu.gd" id="1_q1sey"]
-
-[sub_resource type="SystemFont" id="SystemFont_wea5h"]
-font_names = PackedStringArray("Impact")
 
 [node name="TitleMenu" type="Control"]
 layout_mode = 3
@@ -50,8 +47,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 8
 theme_override_constants/shadow_offset_y = 8
 theme_override_constants/outline_size = 20
-theme_override_fonts/font = SubResource("SystemFont_wea5h")
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 120
 text = "Repel the Night
 "
 horizontal_alignment = 1
@@ -68,38 +64,29 @@ alignment = 1
 [node name="StartButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(300, 64)
 layout_mode = 2
-theme_override_font_sizes/font_size = 48
-text = "Continue"
+text = "CONTINUE"
 
 [node name="IslandsButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(140, 64)
 layout_mode = 2
-theme_override_font_sizes/font_size = 48
-text = "Islands
-"
+text = "ISLANDS"
 
 [node name="ControlsButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(140, 64)
 layout_mode = 2
-theme_override_font_sizes/font_size = 48
-text = "Controls"
+text = "CONTROLS"
 
 [node name="OptionsButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(140, 64)
 layout_mode = 2
-theme_override_font_sizes/font_size = 48
-text = "Options
-"
+text = "OPTIONS"
 
 [node name="CreditsButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(140, 64)
 layout_mode = 2
-theme_override_font_sizes/font_size = 48
-text = "Credits"
+text = "CREDITS"
 
 [node name="ExitButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(140, 64)
 layout_mode = 2
-theme_override_font_sizes/font_size = 48
-text = "Save + Quit
-"
+text = "SAVE + QUIT"
