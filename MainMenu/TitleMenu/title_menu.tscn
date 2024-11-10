@@ -71,13 +71,6 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 48
 text = "Continue"
 
-[node name="OptionsButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
-custom_minimum_size = Vector2(140, 64)
-layout_mode = 2
-theme_override_font_sizes/font_size = 48
-text = "Options
-"
-
 [node name="IslandsButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(140, 64)
 layout_mode = 2
@@ -90,6 +83,13 @@ custom_minimum_size = Vector2(140, 64)
 layout_mode = 2
 theme_override_font_sizes/font_size = 48
 text = "Controls"
+
+[node name="OptionsButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(140, 64)
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Options
+"
 
 [node name="CreditsButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(140, 64)
