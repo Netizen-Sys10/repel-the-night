@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://cv4imsp08kwco"]
+[gd_scene load_steps=10 format=3 uid="uid://cv4imsp08kwco"]
 
 [ext_resource type="PackedScene" uid="uid://n4nq2n6f3lir" path="res://MainMenu/OptionsMenu/Buttons/hotkey_rebind_button.tscn" id="1_bx2pw"]
 [ext_resource type="PackedScene" uid="uid://d3iy7ux7w51up" path="res://MainMenu/OptionsMenu/Buttons/window_mode_button.tscn" id="1_cqmde"]
+[ext_resource type="Script" path="res://MainMenu/OptionsMenu/settings_tab_container.gd" id="1_uxmmy"]
 [ext_resource type="PackedScene" uid="uid://d0nlfmh0xv0kb" path="res://MainMenu/OptionsMenu/Buttons/resolution_display_button.tscn" id="2_fwd5x"]
 [ext_resource type="PackedScene" uid="uid://sufoanc0k8ns" path="res://MainMenu/OptionsMenu/Buttons/audio_slider_settings.tscn" id="4_q4cvf"]
 [ext_resource type="PackedScene" uid="uid://des0tgnrdbbl0" path="res://MainMenu/OptionsMenu/Buttons/subtitles_toggle_button.tscn" id="5_k25dl"]
@@ -19,6 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_uxmmy")
 
 [node name="TabContainer" type="TabContainer" parent="."]
 layout_mode = 1

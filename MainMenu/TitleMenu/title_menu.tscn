@@ -1,12 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://c3k364mkr82y4"]
+[gd_scene load_steps=4 format=3 uid="uid://c3k364mkr82y4"]
 
 [ext_resource type="Texture2D" uid="uid://bfgndd2dnf8ui" path="res://MainMenu/Common/Backgound.png" id="1_axkb5"]
 [ext_resource type="Script" path="res://MainMenu/TitleMenu/title_menu.gd" id="1_q1sey"]
 
 [sub_resource type="SystemFont" id="SystemFont_wea5h"]
-font_names = PackedStringArray("Impact")
-
-[sub_resource type="SystemFont" id="SystemFont_upuj8"]
 font_names = PackedStringArray("Impact")
 
 [node name="TitleMenu" type="Control"]
@@ -34,10 +31,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 12
-theme_override_constants/margin_top = 12
-theme_override_constants/margin_right = 12
-theme_override_constants/margin_bottom = 12
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_top = 48
+theme_override_constants/margin_right = 48
+theme_override_constants/margin_bottom = 48
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
@@ -62,42 +59,47 @@ vertical_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
-alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
-theme_override_constants/separation = 24
+theme_override_constants/separation = 48
 alignment = 1
 
-[node name="Seperator2" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-
 [node name="StartButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
-custom_minimum_size = Vector2(120, 32)
+custom_minimum_size = Vector2(300, 64)
 layout_mode = 2
-theme_override_fonts/font = SubResource("SystemFont_upuj8")
-theme_override_font_sizes/font_size = 24
-text = "Start
-"
-
-[node name="Seperator3" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Continue"
 
 [node name="OptionsButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
-custom_minimum_size = Vector2(120, 32)
+custom_minimum_size = Vector2(140, 64)
 layout_mode = 2
-theme_override_fonts/font = SubResource("SystemFont_upuj8")
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 48
 text = "Options
 "
 
-[node name="Seperator4" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="IslandsButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(140, 64)
 layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Islands
+"
+
+[node name="ControlsButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(140, 64)
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Controls"
+
+[node name="CreditsButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(140, 64)
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Credits"
 
 [node name="ExitButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
-custom_minimum_size = Vector2(120, 32)
+custom_minimum_size = Vector2(140, 64)
 layout_mode = 2
-theme_override_fonts/font = SubResource("SystemFont_upuj8")
-theme_override_font_sizes/font_size = 24
-text = "Quit
+theme_override_font_sizes/font_size = 48
+text = "Save + Quit
 "

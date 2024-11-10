@@ -2,6 +2,7 @@ class_name OptionsMenu
 extends Control
 
 @onready var exit_button = $MarginContainer/VBoxContainer/Exit_Button as Button
+@onready var settings_tab_container = $MarginContainer/VBoxContainer/Settings_Tab_Container as SettingsTabContainer
 
 func enter() -> void:
 	pass
