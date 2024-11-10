@@ -28,7 +28,8 @@ func on_options_pressed() -> void:
 		get_parent().change_to("OptionsMenu")
 
 func on_controls_pressed() -> void:
-	pass
+	if get_parent().has_method("open_submenu"):
+		get_parent().open_submenu("ControlsMenu")
 	
 func on_exit_pressed() -> void:
 	get_tree().quit()

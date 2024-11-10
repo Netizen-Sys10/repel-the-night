@@ -8,8 +8,8 @@ var history : Array[String]
 var menus  : Dictionary = {
 	"TitleMenu" : load("res://MainMenu/TitleMenu/title_menu.tscn"),
 	"OptionsMenu" : load("res://MainMenu/OptionsMenu/options_menu.tscn"),
+	"ControlsMenu" : load("res://MainMenu/ControlsMenu/controls_menu.tscn")
 	}
-
 
 func enter() -> void:
 	pass
@@ -32,7 +32,6 @@ func change_to(next_menu : String) -> void:
 	history.append(current_menu.name) # Only saving the string name of the menu, not the actual node
 	_set_menu(next_menu)
 	pass
-
 
 # Only for submenus with a back button
 func back() -> void:
