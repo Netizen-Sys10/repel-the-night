@@ -15,15 +15,21 @@ run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="res://Assets/Audio/default_bus_layout.tres"
+
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/size/window_width_override=1280
+window/size/window_height_override=720
 
 [gui]
 
-theme/custom="res://custom_theme.tres"
-theme/custom_font="res://m3x6.ttf"
+theme/custom="res://Assets/Themes/custom_theme.tres"
+theme/custom_font="res://Assets/Fonts/m3x6.ttf"
 
 [input]
 
