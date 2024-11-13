@@ -1,3 +1,21 @@
-[gd_scene format=3 uid="uid://cguc2m72i848"]
+[gd_scene load_steps=2 format=3 uid="uid://cguc2m72i848"]
+
+[ext_resource type="Texture2D" uid="uid://c7jsv1he8agq3" path="res://Assets/Sprites/Dirt_v2.png" id="1_5xt4n"]
 
 [node name="Test" type="Node2D"]
+
+[node name="DirtV2" type="Sprite2D" parent="."]
+position = Vector2(236, 227)
+texture = ExtResource("1_5xt4n")
+
+[node name="DirtV3" type="Sprite2D" parent="."]
+position = Vector2(44, 227)
+texture = ExtResource("1_5xt4n")
+
+[node name="DirtV4" type="Sprite2D" parent="."]
+position = Vector2(428, 227)
+texture = ExtResource("1_5xt4n")
+
+[node name="DirtV5" type="Sprite2D" parent="."]
+position = Vector2(620, 227)
+texture = ExtResource("1_5xt4n")
