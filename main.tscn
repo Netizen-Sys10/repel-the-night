@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://n7wyo7y5635b"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_o7e1n"]
+[ext_resource type="AudioStream" uid="uid://sf6me7t3g154" path="res://Menu/Common/dark-fantasy-ambient-dungeon-synthpiano-verse-248214.mp3" id="2_g6k23"]
+
+[node name="Main" type="Node" node_paths=PackedStringArray("fps_label")]
+script = ExtResource("1_o7e1n")
+fps_label = NodePath("CanvasLayer/FPSLabel")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="FPSLabel" type="Label" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 23.0
+grow_horizontal = 0
+
+[node name="MusicStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_g6k23")
+autoplay = true
+bus = &"Music"
