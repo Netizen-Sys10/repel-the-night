@@ -1,0 +1,96 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3k364mkr82y4"]
+
+[ext_resource type="Texture2D" uid="uid://bfgndd2dnf8ui" path="res://Menu/Common/Backgound.png" id="1_axkb5"]
+[ext_resource type="Script" path="res://Menu/TitleMenu/title_menu.gd" id="1_q1sey"]
+
+[node name="TitleMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q1sey")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_axkb5")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_top = 48
+theme_override_constants/margin_right = 48
+theme_override_constants/margin_bottom = 48
+
+[node name="TitleContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Seperator" type="Control" parent="MarginContainer/TitleContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MarginContainer/TitleContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 64
+text = "Repel the Night
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HButtonContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="VButtonContainer" type="VBoxContainer" parent="MarginContainer/HButtonContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="StartButton" type="Button" parent="MarginContainer/HButtonContainer/VButtonContainer"]
+custom_minimum_size = Vector2(120, 30)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "CONTINUE"
+
+[node name="ProfilesButton" type="Button" parent="MarginContainer/HButtonContainer/VButtonContainer"]
+custom_minimum_size = Vector2(120, 30)
+layout_mode = 2
+text = "PROFILES"
+
+[node name="ControlsButton" type="Button" parent="MarginContainer/HButtonContainer/VButtonContainer"]
+custom_minimum_size = Vector2(120, 30)
+layout_mode = 2
+text = "CONTROLS"
+
+[node name="OptionsButton" type="Button" parent="MarginContainer/HButtonContainer/VButtonContainer"]
+custom_minimum_size = Vector2(120, 30)
+layout_mode = 2
+text = "OPTIONS"
+
+[node name="CreditsButton" type="Button" parent="MarginContainer/HButtonContainer/VButtonContainer"]
+custom_minimum_size = Vector2(120, 30)
+layout_mode = 2
+text = "CREDITS"
+
+[node name="ExitButton" type="Button" parent="MarginContainer/HButtonContainer/VButtonContainer"]
+custom_minimum_size = Vector2(120, 30)
+layout_mode = 2
+text = "SAVE + QUIT"
+
+[connection signal="button_down" from="MarginContainer/HButtonContainer/VButtonContainer/StartButton" to="." method="_on_start_pressed"]
+[connection signal="button_down" from="MarginContainer/HButtonContainer/VButtonContainer/ControlsButton" to="." method="_on_controls_pressed"]
+[connection signal="button_down" from="MarginContainer/HButtonContainer/VButtonContainer/OptionsButton" to="." method="_on_options_pressed"]
+[connection signal="button_down" from="MarginContainer/HButtonContainer/VButtonContainer/ExitButton" to="." method="_on_exit_pressed"]

@@ -7,7 +7,8 @@ extends Node
 var mode_stack : Array[Node]
 var current_mode : Node
 var modes : Dictionary = {
-	"main_menu" : load("res://MainMenu/main_menu.tscn"),
+	"main_menu" : load("res://Menu/menu.tscn"),
+	"run" : load("res://Run/run.tscn")
 }
 
 
@@ -19,12 +20,16 @@ func _push_mode(mode : String):
 	current_mode = modes[mode].instantiate()
 	mode_stack.push_front(current_mode)
 	add_child(current_mode)
-	mode_stack[0].enter()
+	if mode_stack[0].has_method("enter"):
+		mode_stack[0].enter()
 	pass
 
 
 func _pop_mode():
-	mode_stack[0].exit()
+	if not mode_stack.size() > 0:
+		return
+	if mode_stack[0].has_method("exit"):
+		mode_stack[0].exit()
 	current_mode.queue_free()
 	mode_stack.pop_front()
 	pass
@@ -36,7 +41,8 @@ func _pop_and_push(next_mode : String) -> void:
 
 
 func _clear_and_push(next_mode : String) -> void:
-	mode_stack[0].exit()
+	if mode_stack[0].has_method("exit"):
+		mode_stack[0].exit()
 	current_mode.queue_free()
 	mode_stack = [] #This clears all remaining modes without calling their exit function
 	_push_mode(next_mode)
