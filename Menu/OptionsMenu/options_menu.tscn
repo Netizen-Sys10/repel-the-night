@@ -5,7 +5,7 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wmlcd"]
 bg_color = Color(0.254902, 0.180392, 0.172549, 1)
 
-[node name="Options_Menu" type="Control"]
+[node name="Options_Menu" type="Control" node_paths=PackedStringArray("options_btn", "fullscreen_btn")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,6 +13,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_i2rir")
+options_btn = NodePath("PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2/ResolutionOptions")
+fullscreen_btn = NodePath("PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/CheckBox")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -70,8 +72,16 @@ layout_mode = 2
 text = "RESOLUTION"
 vertical_alignment = 1
 
-[node name="OptionButton" type="OptionButton" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="ResolutionOptions" type="OptionButton" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
+item_count = 4
+popup/item_0/text = "640x360"
+popup/item_1/text = "640x480"
+popup/item_1/id = 1
+popup/item_2/text = "1280x720"
+popup/item_2/id = 2
+popup/item_3/text = "1920x1080"
+popup/item_3/id = 3
 
 [node name="HBoxContainer5" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -115,3 +125,7 @@ vertical_alignment = 1
 [node name="BackButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Back"
+
+[connection signal="toggled" from="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/CheckBox" to="." method="_on_window_mode_toggled"]
+[connection signal="item_selected" from="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2/ResolutionOptions" to="." method="_on_option_button_item_selected"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/BackButton" to="." method="_on_exit_pressed"]
