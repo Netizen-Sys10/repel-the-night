@@ -44,8 +44,8 @@ layout_mode = 2
 layout_mode = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 16
-theme_override_font_sizes/font_size = 64
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 32
 text = "Repel the Night
 "
 horizontal_alignment = 1
@@ -56,37 +56,30 @@ layout_mode = 2
 
 [node name="VButtonContainer" type="VBoxContainer" parent="MarginContainer/HButtonContainer"]
 layout_mode = 2
-theme_override_constants/separation = 16
+theme_override_constants/separation = 3
 alignment = 1
 
 [node name="StartButton" type="Button" parent="MarginContainer/HButtonContainer/VButtonContainer"]
-custom_minimum_size = Vector2(120, 30)
 layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "CONTINUE"
+text = "Continue"
 
 [node name="ProfilesButton" type="Button" parent="MarginContainer/HButtonContainer/VButtonContainer"]
-custom_minimum_size = Vector2(120, 30)
 layout_mode = 2
 text = "PROFILES"
 
 [node name="ControlsButton" type="Button" parent="MarginContainer/HButtonContainer/VButtonContainer"]
-custom_minimum_size = Vector2(120, 30)
 layout_mode = 2
 text = "CONTROLS"
 
 [node name="OptionsButton" type="Button" parent="MarginContainer/HButtonContainer/VButtonContainer"]
-custom_minimum_size = Vector2(120, 30)
 layout_mode = 2
 text = "OPTIONS"
 
 [node name="CreditsButton" type="Button" parent="MarginContainer/HButtonContainer/VButtonContainer"]
-custom_minimum_size = Vector2(120, 30)
 layout_mode = 2
 text = "CREDITS"
 
 [node name="ExitButton" type="Button" parent="MarginContainer/HButtonContainer/VButtonContainer"]
-custom_minimum_size = Vector2(120, 30)
 layout_mode = 2
 text = "SAVE + QUIT"
 
