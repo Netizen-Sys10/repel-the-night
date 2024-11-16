@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdqc8e3ayqtbn"
-path="res://.godot/imported/Button_shift.png-320f546816b504d6f193a74c96d9e45f.ctex"
+uid="uid://ysp1nmgdef3d"
+path="res://.godot/imported/Pine_tree.png-121841c0e8265906db1e3d61456f20d6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Menu/ControlsMenu/Button_shift.png"
-dest_files=["res://.godot/imported/Button_shift.png-320f546816b504d6f193a74c96d9e45f.ctex"]
+source_file="res://Assets/Sprites/Pine_tree.png"
+dest_files=["res://.godot/imported/Pine_tree.png-121841c0e8265906db1e3d61456f20d6.ctex"]
 
 [params]
 

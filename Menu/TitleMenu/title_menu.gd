@@ -1,4 +1,3 @@
-class_name TitleMenu
 extends Control
 
 
