@@ -1,4 +1,3 @@
-class_name OptionsMenu
 extends Control
 
 @export var options_btn : OptionButton

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vfjg533isxle"
-path="res://.godot/imported/Button_left.png-73e033e98f26611bfe39c8fd20b63b59.ctex"
+uid="uid://dh8novvrhot2d"
+path="res://.godot/imported/UI - with Backgorund.png-7149e80f5e1302f3e4e0640e842c704d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Menu/ControlsMenu/Button_left.png"
-dest_files=["res://.godot/imported/Button_left.png-73e033e98f26611bfe39c8fd20b63b59.ctex"]
+source_file="res://Assets/Themes/UI - with Backgorund.png"
+dest_files=["res://.godot/imported/UI - with Backgorund.png-7149e80f5e1302f3e4e0640e842c704d.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vc057e5410hs"
-path="res://.godot/imported/Button_up.png-752f4f5eadf6377b40e70268d57a6a15.ctex"
+uid="uid://7mmxt5qsaj4m"
+path="res://.godot/imported/UI - 16x16 UI Tileset with glow.png-eb8c7314ed00a0e80aecaa6e4f740512.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Menu/ControlsMenu/Button_up.png"
-dest_files=["res://.godot/imported/Button_up.png-752f4f5eadf6377b40e70268d57a6a15.ctex"]
+source_file="res://Assets/Themes/UI - 16x16 UI Tileset with glow.png"
+dest_files=["res://.godot/imported/UI - 16x16 UI Tileset with glow.png-eb8c7314ed00a0e80aecaa6e4f740512.ctex"]
 
 [params]
 
