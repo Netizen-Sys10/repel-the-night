@@ -5,7 +5,7 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wmlcd"]
 bg_color = Color(0.254902, 0.180392, 0.172549, 1)
 
-[node name="Options_Menu" type="Control" node_paths=PackedStringArray("options_btn", "fullscreen_btn")]
+[node name="OptionsMenu" type="Control" node_paths=PackedStringArray("options_btn", "fullscreen_btn")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
