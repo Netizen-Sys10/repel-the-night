@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c3lxx6ljbivfl"]
 
-[ext_resource type="Script" path="res://Run/first_level.gd" id="1_vhb4g"]
+[ext_resource type="Script" path="res://Levels/Run/first_level.gd" id="1_vhb4g"]
 [ext_resource type="Texture2D" uid="uid://bfgndd2dnf8ui" path="res://Menu/Common/Backgound.png" id="1_xk618"]
 
 [node name="Game" type="Node2D"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ysp1nmgdef3d"
-path="res://.godot/imported/Pine_tree.png-121841c0e8265906db1e3d61456f20d6.ctex"
+uid="uid://c7jsv1he8agq3"
+path="res://.godot/imported/Dirt_v2.png-bfee3b3d8496950e82b2ae686f022661.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Pine_tree.png"
-dest_files=["res://.godot/imported/Pine_tree.png-121841c0e8265906db1e3d61456f20d6.ctex"]
+source_file="res://Levels/Common/Dirt_v2.png"
+dest_files=["res://.godot/imported/Dirt_v2.png-bfee3b3d8496950e82b2ae686f022661.ctex"]
 
 [params]
 

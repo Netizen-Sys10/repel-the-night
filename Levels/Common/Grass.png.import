@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://k5lfq0s7f7xc"
-path="res://.godot/imported/DirtBlock.png-7c2e816f2f8d34c1af9ded677e38a17b.ctex"
+uid="uid://d2hskekkkds5l"
+path="res://.godot/imported/Grass.png-5ab8ea71c0497ef0a787b38d47505696.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/DirtBlock.png"
-dest_files=["res://.godot/imported/DirtBlock.png-7c2e816f2f8d34c1af9ded677e38a17b.ctex"]
+source_file="res://Levels/Common/Grass.png"
+dest_files=["res://.godot/imported/Grass.png-5ab8ea71c0497ef0a787b38d47505696.ctex"]
 
 [params]
 
