@@ -147,6 +147,18 @@ blend_point_0/pos = -1.0
 blend_point_1/node = SubResource("AnimationNodeAnimation_fg4ds")
 blend_point_1/pos = 1.0
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hvpgw"]
+animation = &"run"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_no0fn"]
+animation = &"run"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_k8e3s"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_hvpgw")
+blend_point_0/pos = -1.0
+blend_point_1/node = SubResource("AnimationNodeAnimation_no0fn")
+blend_point_1/pos = 1.0
+
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_t8bpg"]
 animation = &"idle"
 
@@ -165,18 +177,6 @@ blend_point_2/node = SubResource("AnimationNodeAnimation_p4sfe")
 blend_point_2/pos = -1.0
 blend_mode = 1
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hvpgw"]
-animation = &"run"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_no0fn"]
-animation = &"run"
-
-[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_k8e3s"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_hvpgw")
-blend_point_0/pos = -1.0
-blend_point_1/node = SubResource("AnimationNodeAnimation_no0fn")
-blend_point_1/pos = 1.0
-
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_1rxuo"]
 advance_mode = 2
 
@@ -185,6 +185,7 @@ advance_mode = 2
 advance_condition = &"run"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_mfgf1"]
+advance_mode = 2
 advance_condition = &"normal"
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_lvkkv"]
@@ -193,12 +194,12 @@ states/Death/position = Vector2(952, 100)
 states/End/position = Vector2(1097, 100)
 states/Hit/node = SubResource("AnimationNodeBlendSpace1D_jbqm7")
 states/Hit/position = Vector2(766, 100)
+states/Run/node = SubResource("AnimationNodeBlendSpace1D_k8e3s")
+states/Run/position = Vector2(523, 29)
 states/Start/position = Vector2(305, 100)
-states/normal/node = SubResource("AnimationNodeBlendSpace1D_xacu8")
-states/normal/position = Vector2(523, 174)
-states/run/node = SubResource("AnimationNodeBlendSpace1D_k8e3s")
-states/run/position = Vector2(523, 29)
-transitions = ["Start", "normal", SubResource("AnimationNodeStateMachineTransition_1rxuo"), "normal", "run", SubResource("AnimationNodeStateMachineTransition_7neka"), "run", "normal", SubResource("AnimationNodeStateMachineTransition_mfgf1")]
+states/Walk/node = SubResource("AnimationNodeBlendSpace1D_xacu8")
+states/Walk/position = Vector2(523, 174)
+transitions = ["Start", "Walk", SubResource("AnimationNodeStateMachineTransition_1rxuo"), "Walk", "Run", SubResource("AnimationNodeStateMachineTransition_7neka"), "Run", "Walk", SubResource("AnimationNodeStateMachineTransition_mfgf1")]
 graph_offset = Vector2(-107, -52)
 
 [node name="Player" type="CharacterBody2D"]
@@ -212,6 +213,7 @@ vframes = 12
 region_rect = Rect2(23, 10, 9, 24)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource("RectangleShape2D_nlu5o")
 
 [node name="PlayerCamera" type="Camera2D" parent="."]
@@ -231,17 +233,18 @@ parameters/conditions/normal = false
 parameters/conditions/run = false
 parameters/Death/blend_position = 0
 parameters/Hit/blend_position = 0
-parameters/normal/blend_position = 0.000705719
-parameters/run/blend_position = 0.982262
+parameters/Run/blend_position = 0.982262
+parameters/Walk/blend_position = -1.18746
 
 [node name="CharacterStateMachine" type="Node2D" parent="." node_paths=PackedStringArray("current_state", "character")]
 script = ExtResource("4_wj8ia")
 current_state = NodePath("Normal")
 character = NodePath("..")
 
-[node name="Normal" type="Node2D" parent="CharacterStateMachine" node_paths=PackedStringArray("run_state")]
+[node name="Normal" type="Node2D" parent="CharacterStateMachine" node_paths=PackedStringArray("run_state", "normal_state")]
 script = ExtResource("5_g5kjj")
 run_state = NodePath("../Run")
+normal_state = NodePath(".")
 
 [node name="Run" type="Node2D" parent="CharacterStateMachine" node_paths=PackedStringArray("normal_state")]
 script = ExtResource("6_cwj10")
