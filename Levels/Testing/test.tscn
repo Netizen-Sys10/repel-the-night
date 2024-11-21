@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cguc2m72i848"]
+[gd_scene load_steps=29 format=3 uid="uid://cguc2m72i848"]
 
 [ext_resource type="Texture2D" uid="uid://c7jsv1he8agq3" path="res://Levels/Common/Dirt_v2.png" id="1_3xfu6"]
 [ext_resource type="Texture2D" uid="uid://d2hskekkkds5l" path="res://Levels/Common/Grass.png" id="2_m88nh"]
@@ -6,7 +6,10 @@
 [ext_resource type="Shader" path="res://Assets/Shader/water.gdshader" id="4_30bgc"]
 [ext_resource type="Script" path="res://Assets/Shader/water.gd" id="5_eryhf"]
 [ext_resource type="PackedScene" uid="uid://cdvevipegaoqx" path="res://Units/Player/player.tscn" id="6_0f33p"]
-[ext_resource type="Texture2D" uid="uid://culr8c5gniwxw" path="res://Units/Enemies/Small Enemy/Sprites/Small_monster_idle.png" id="7_fg6il"]
+[ext_resource type="Texture2D" uid="uid://cbqr678eh68bp" path="res://Levels/Common/sky.png" id="8_dsfy7"]
+[ext_resource type="Texture2D" uid="uid://hq3tv66apuif" path="res://Levels/Common/Tileset.png" id="9_fvuyn"]
+[ext_resource type="Texture2D" uid="uid://8arpl0e3r0ii" path="res://Levels/Common/Custom Fires-Mild.png" id="10_jc0cn"]
+[ext_resource type="Texture2D" uid="uid://bkwi3gc424acj" path="res://Levels/Common/sword.png" id="10_mgbor"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_b1ksg"]
 
@@ -20,13 +23,105 @@ shader_parameter/CAST_COLOR = Color(0, 0, 0, 1)
 shader_parameter/speed = Vector2(0.03, 0.03)
 shader_parameter/wave_strength = 0.5
 shader_parameter/y_zoom = 2.0
-shader_parameter/scale = Vector2(664.023, 165)
+shader_parameter/scale = Vector2(3834, 165)
 shader_parameter/fast_noise = SubResource("NoiseTexture2D_hxt52")
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_vy456"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q0ee6"]
 size = Vector2(192, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xpvqb"]
+atlas = ExtResource("10_jc0cn")
+region = Rect2(0, 0, 36, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_swqkw"]
+atlas = ExtResource("10_jc0cn")
+region = Rect2(36, 0, 36, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_apbtk"]
+atlas = ExtResource("10_jc0cn")
+region = Rect2(72, 0, 36, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a50nt"]
+atlas = ExtResource("10_jc0cn")
+region = Rect2(108, 0, 36, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ptnvn"]
+atlas = ExtResource("10_jc0cn")
+region = Rect2(144, 0, 36, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x7aw8"]
+atlas = ExtResource("10_jc0cn")
+region = Rect2(180, 0, 36, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nxq5k"]
+atlas = ExtResource("10_jc0cn")
+region = Rect2(216, 0, 36, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u10n3"]
+atlas = ExtResource("10_jc0cn")
+region = Rect2(252, 0, 36, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rvros"]
+atlas = ExtResource("10_jc0cn")
+region = Rect2(288, 0, 36, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1oa8x"]
+atlas = ExtResource("10_jc0cn")
+region = Rect2(324, 0, 36, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1dhqu"]
+atlas = ExtResource("10_jc0cn")
+region = Rect2(360, 0, 36, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4pgq6"]
+atlas = ExtResource("10_jc0cn")
+region = Rect2(396, 0, 36, 38)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1rmax"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xpvqb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_swqkw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_apbtk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a50nt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ptnvn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x7aw8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nxq5k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u10n3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rvros")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1oa8x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1dhqu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4pgq6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
 
 [node name="Test" type="Node2D"]
 
@@ -41,8 +136,8 @@ texture = ExtResource("3_gqycs")
 [node name="Water" type="Sprite2D" parent="."]
 z_index = 2
 material = SubResource("ShaderMaterial_45iyo")
-position = Vector2(325.989, 322.5)
-scale = Vector2(664.023, 165)
+position = Vector2(2.00012, 322.5)
+scale = Vector2(3834, 165)
 texture = SubResource("CanvasTexture_vy456")
 script = ExtResource("5_eryhf")
 
@@ -85,9 +180,44 @@ texture = ExtResource("1_3xfu6")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
 shape = SubResource("RectangleShape2D_q0ee6")
 
-[node name="SmallMonsterIdle" type="Sprite2D" parent="."]
-position = Vector2(42, 214)
-texture = ExtResource("7_fg6il")
-hframes = 6
+[node name="Sky" type="Sprite2D" parent="."]
+z_index = -10
+position = Vector2(0, 180)
+scale = Vector2(6, 1.027)
+texture = ExtResource("8_dsfy7")
+
+[node name="Tileset" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(458, 203)
+texture = ExtResource("9_fvuyn")
+region_enabled = true
+region_rect = Rect2(9, 61, 98, 35)
+
+[node name="Tileset2" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(543, 213)
+texture = ExtResource("9_fvuyn")
+region_enabled = true
+region_rect = Rect2(113, 33, 45, 15)
+
+[node name="Tileset3" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(624, 213)
+texture = ExtResource("9_fvuyn")
+region_enabled = true
+region_rect = Rect2(162, 33, 45, 15)
+
+[node name="Node" type="Node" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(187, 201)
+sprite_frames = SubResource("SpriteFrames_1rmax")
+autoplay = "default"
+frame_progress = 0.655764
+
+[node name="Sword" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(188, 205)
+texture = ExtResource("10_mgbor")
 
 [connection signal="item_rect_changed" from="Water" to="Water" method="_on_item_rect_changed"]
