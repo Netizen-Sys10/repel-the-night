@@ -8,8 +8,10 @@ class_name Player extends CharacterBody2D
 
 var direction : Vector2 = Vector2.ZERO
 
-func _physics_process(_delta):
+func _ready(): 
+	pass
 
+func _physics_process(delta):
 	# Get the input direction and handle the movement/deceleration.
 	direction = Input.get_vector("move_left", "move_right", "up", "down")
 	if direction && state_machine.check_if_can_move():
@@ -24,7 +26,7 @@ func _physics_process(_delta):
 # Updates the Player Animation	
 func update_animation():
 	
-	animation_tree.set("parameters/normal/blend_position",direction.x)
+	animation_tree.set("parameters/move/blend_position",direction.x)
 
 # Updates the Facing Direction of the Player	
 func update_facing_direction():

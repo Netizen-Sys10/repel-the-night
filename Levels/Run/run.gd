@@ -6,7 +6,7 @@ signal main_menu_exited(next_mode)
 var current_scene : Node
 var scene_stack : Array
 var scenes  : Dictionary = {
-	"FirstLevel" : load("res://Run/first_level.tscn"),
+	"FirstLevel" : load("res://Levels/Run/first_level.tscn"),
 	}
 
 
