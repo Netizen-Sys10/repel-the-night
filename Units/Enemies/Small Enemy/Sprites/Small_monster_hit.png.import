@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://q6ef84uuefs"
-path="res://.godot/imported/Player_Run.png-11b89a14e31e4a5239b222e6c9370662.ctex"
+uid="uid://4iuom5layrqr"
+path="res://.godot/imported/Small_monster_hit.png-4fac35491fa48b1981b4e95461a6dde6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Units/Player/Sprite/Player_Run.png"
-dest_files=["res://.godot/imported/Player_Run.png-11b89a14e31e4a5239b222e6c9370662.ctex"]
+source_file="res://Units/Enemies/Small Enemy/Sprites/Small_monster_hit.png"
+dest_files=["res://.godot/imported/Small_monster_hit.png-4fac35491fa48b1981b4e95461a6dde6.ctex"]
 
 [params]
 

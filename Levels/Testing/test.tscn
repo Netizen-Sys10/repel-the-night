@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cguc2m72i848"]
+[gd_scene load_steps=13 format=3 uid="uid://cguc2m72i848"]
 
 [ext_resource type="Texture2D" uid="uid://c7jsv1he8agq3" path="res://Levels/Common/Dirt_v2.png" id="1_3xfu6"]
 [ext_resource type="Texture2D" uid="uid://d2hskekkkds5l" path="res://Levels/Common/Grass.png" id="2_m88nh"]
@@ -6,6 +6,7 @@
 [ext_resource type="Shader" path="res://Assets/Shader/water.gdshader" id="4_30bgc"]
 [ext_resource type="Script" path="res://Assets/Shader/water.gd" id="5_eryhf"]
 [ext_resource type="PackedScene" uid="uid://cdvevipegaoqx" path="res://Units/Player/player.tscn" id="6_0f33p"]
+[ext_resource type="Texture2D" uid="uid://culr8c5gniwxw" path="res://Units/Enemies/Small Enemy/Sprites/Small_monster_idle.png" id="7_fg6il"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_b1ksg"]
 
@@ -83,5 +84,10 @@ texture = ExtResource("1_3xfu6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
 shape = SubResource("RectangleShape2D_q0ee6")
+
+[node name="SmallMonsterIdle" type="Sprite2D" parent="."]
+position = Vector2(42, 214)
+texture = ExtResource("7_fg6il")
+hframes = 6
 
 [connection signal="item_rect_changed" from="Water" to="Water" method="_on_item_rect_changed"]
