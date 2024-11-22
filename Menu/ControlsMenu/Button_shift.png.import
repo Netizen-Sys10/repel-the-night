@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bdqc8e3ayqtbn"
-path="res://.godot/imported/Button_shift.png-041e325ea94c753e08370afaf99aca43.ctex"
+path="res://.godot/imported/Button_shift.png-320f546816b504d6f193a74c96d9e45f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Themes/Button_shift.png"
-dest_files=["res://.godot/imported/Button_shift.png-041e325ea94c753e08370afaf99aca43.ctex"]
+source_file="res://Menu/ControlsMenu/Button_shift.png"
+dest_files=["res://.godot/imported/Button_shift.png-320f546816b504d6f193a74c96d9e45f.ctex"]
 
 [params]
 

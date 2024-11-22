@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" path="res://Menu/ControlsMenu/controls_menu.gd" id="1_i2mfk"]
 [ext_resource type="Script" path="res://Assets/Themes/animatedTextureRect.gd" id="2_ip0qr"]
-[ext_resource type="Texture2D" uid="uid://bbe4m7hll113q" path="res://Assets/Themes/Button-Sheet_right.png" id="3_alfja"]
-[ext_resource type="Texture2D" uid="uid://b4kigmu5ssibd" path="res://Assets/Themes/Button-Sheet_left.png" id="3_mshy5"]
-[ext_resource type="Texture2D" uid="uid://ce5momd7685dk" path="res://Assets/Themes/Button-Sheet_down.png" id="4_0mf11"]
-[ext_resource type="Texture2D" uid="uid://bdqc8e3ayqtbn" path="res://Assets/Themes/Button_shift.png" id="4_rxyp1"]
-[ext_resource type="Texture2D" uid="uid://bx8ckq80iqhs7" path="res://Assets/Themes/Button-Sheet_up.png" id="6_xniih"]
+[ext_resource type="Texture2D" uid="uid://bbe4m7hll113q" path="res://Menu/ControlsMenu/Button-Sheet_right.png" id="3_alfja"]
+[ext_resource type="Texture2D" uid="uid://b4kigmu5ssibd" path="res://Menu/ControlsMenu/Button-Sheet_left.png" id="3_mshy5"]
+[ext_resource type="Texture2D" uid="uid://ce5momd7685dk" path="res://Menu/ControlsMenu/Button-Sheet_down.png" id="4_0mf11"]
+[ext_resource type="Texture2D" uid="uid://bdqc8e3ayqtbn" path="res://Menu/ControlsMenu/Button_shift.png" id="4_rxyp1"]
+[ext_resource type="Texture2D" uid="uid://bx8ckq80iqhs7" path="res://Menu/ControlsMenu/Button-Sheet_up.png" id="6_xniih"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8r8o6"]
 atlas = ExtResource("3_mshy5")

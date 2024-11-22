@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5cnocvkchile"]
+
+[ext_resource type="Script" path="res://Units/Player/States/move.gd" id="1_8wlak"]
+
+[node name="Move" type="Node2D" node_paths=PackedStringArray("run_state", "hit_state", "death_state")]
+script = ExtResource("1_8wlak")
+run_state = NodePath("")
+hit_state = NodePath("")
+death_state = NodePath("")
+animation_name = "move"

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ce5momd7685dk"
-path="res://.godot/imported/Button-Sheet_down.png-89c0b55085d838646f10348ab13f4fcf.ctex"
+uid="uid://bx8ckq80iqhs7"
+path="res://.godot/imported/Button-Sheet_up.png-0e0455c52fa62740c9f8881dda76b0da.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Themes/Button-Sheet_down.png"
-dest_files=["res://.godot/imported/Button-Sheet_down.png-89c0b55085d838646f10348ab13f4fcf.ctex"]
+source_file="res://Menu/ControlsMenu/Button-Sheet_up.png"
+dest_files=["res://.godot/imported/Button-Sheet_up.png-0e0455c52fa62740c9f8881dda76b0da.ctex"]
 
 [params]
 

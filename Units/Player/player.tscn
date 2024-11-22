@@ -1,17 +1,13 @@
-[gd_scene load_steps=33 format=3 uid="uid://cdvevipegaoqx"]
+[gd_scene load_steps=29 format=3 uid="uid://cdvevipegaoqx"]
 
 [ext_resource type="Script" path="res://Units/Player/player.gd" id="1_4hqnd"]
-[ext_resource type="Texture2D" uid="uid://btuyf5g86cgj" path="res://Units/Player/Sprites/Player_Idle.png" id="2_2gb1p"]
+[ext_resource type="Texture2D" uid="uid://btuyf5g86cgj" path="res://Units/Player/Sprites/player_idle.png" id="2_2gb1p"]
 [ext_resource type="Script" path="res://Units/Player/player_camera.gd" id="3_3noy7"]
-[ext_resource type="Texture2D" uid="uid://caqa664crawxp" path="res://Units/Player/Sprites/Player_death.png" id="4_0vq0p"]
-[ext_resource type="Texture2D" uid="uid://c3g3wmh1uis4t" path="res://Units/Player/Sprites/Player_hit.png" id="4_apbmr"]
-[ext_resource type="Texture2D" uid="uid://d2n313w4woxay" path="res://Units/Player/Sprites/Player_Walk.png" id="4_bkj67"]
-[ext_resource type="Texture2D" uid="uid://6csmtuvs4g8v" path="res://Units/Player/Sprites/Player_Run_Fast.png" id="4_hf483"]
+[ext_resource type="Texture2D" uid="uid://caqa664crawxp" path="res://Units/Player/Sprites/player_death.png" id="4_0vq0p"]
+[ext_resource type="Texture2D" uid="uid://c3g3wmh1uis4t" path="res://Units/Player/Sprites/player_hit.png" id="4_apbmr"]
+[ext_resource type="Texture2D" uid="uid://d2n313w4woxay" path="res://Units/Player/Sprites/player_walk.png" id="4_bkj67"]
+[ext_resource type="Texture2D" uid="uid://6csmtuvs4g8v" path="res://Units/Player/Sprites/player_run_fast.png" id="4_hf483"]
 [ext_resource type="Script" path="res://Units/Player/StateMachine/character_state_machine.gd" id="4_wj8ia"]
-[ext_resource type="Script" path="res://Units/Player/StateMachine/run.gd" id="6_cwj10"]
-[ext_resource type="Script" path="res://Units/Player/StateMachine/hit.gd" id="7_6uujn"]
-[ext_resource type="Script" path="res://Units/Player/StateMachine/death.gd" id="8_xrx0a"]
-[ext_resource type="Script" path="res://Units/Player/StateMachine/move.gd" id="9_o62n1"]
 [ext_resource type="Script" path="res://Units/Player/StateMachine/state_debug_label.gd" id="9_rplaq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nlu5o"]
@@ -389,7 +385,7 @@ states/move/position = Vector2(452, 100)
 states/run/node = SubResource("AnimationNodeAnimation_nqxr4")
 states/run/position = Vector2(590, 100)
 transitions = ["Start", "move", SubResource("AnimationNodeStateMachineTransition_o83pl"), "move", "run", SubResource("AnimationNodeStateMachineTransition_g0dih"), "run", "move", SubResource("AnimationNodeStateMachineTransition_srxu5")]
-graph_offset = Vector2(-107, -52)
+graph_offset = Vector2(113, -52)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_4hqnd")
@@ -418,38 +414,10 @@ advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../AnimationPlayer")
 parameters/move/blend_position = -0.0269865
 
-[node name="CharacterStateMachine" type="Node2D" parent="." node_paths=PackedStringArray("player", "animation_tree", "current_state")]
+[node name="CharacterStateMachine" type="Node2D" parent="." node_paths=PackedStringArray("player", "animation_tree")]
 script = ExtResource("4_wj8ia")
 player = NodePath("..")
 animation_tree = NodePath("../AnimationTree")
-current_state = NodePath("Move")
-
-[node name="Move" type="Node2D" parent="CharacterStateMachine" node_paths=PackedStringArray("run_state", "hit_state", "death_state")]
-script = ExtResource("9_o62n1")
-run_state = NodePath("../Run")
-hit_state = NodePath("../Hit")
-death_state = NodePath("../Death")
-animation_name = "move"
-
-[node name="Run" type="Node2D" parent="CharacterStateMachine" node_paths=PackedStringArray("move_state", "hit_state", "death_state")]
-script = ExtResource("6_cwj10")
-move_state = NodePath("../Move")
-hit_state = NodePath("../Hit")
-death_state = NodePath("../Death")
-animation_name = "run"
-
-[node name="Hit" type="Node2D" parent="CharacterStateMachine" node_paths=PackedStringArray("run_state", "move_state", "death_state")]
-script = ExtResource("7_6uujn")
-run_state = NodePath("../Run")
-move_state = NodePath("../Move")
-death_state = NodePath("../Death")
-animation_name = "hit"
-can_move = false
-
-[node name="Death" type="Node2D" parent="CharacterStateMachine"]
-script = ExtResource("8_xrx0a")
-animation_name = "death"
-can_move = false
 
 [node name="StateDebugLabel" type="Label" parent="." node_paths=PackedStringArray("state_machine")]
 offset_left = -25.0

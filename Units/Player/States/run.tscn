@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bg38xcgw62kej"]
+
+[ext_resource type="Script" path="res://Units/Player/States/run.gd" id="1_idhx7"]
+
+[node name="Run" type="Node2D" node_paths=PackedStringArray("hit_state", "death_state")]
+script = ExtResource("1_idhx7")
+hit_state = NodePath("")
+death_state = NodePath("")
+animation_name = "run"

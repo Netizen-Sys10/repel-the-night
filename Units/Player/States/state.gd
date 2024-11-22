@@ -1,5 +1,6 @@
 # Virtual base class for all states.
-class_name State extends Node
+class_name State 
+extends Node
 
 @export var animation_name: String
 @export var can_move : bool = true
@@ -13,7 +14,7 @@ var next_state : State
 func state_input(_event : InputEvent):
 	pass
 	
-func state_process(delta):
+func state_process(_delta):
 	pass
 	
 # Called when the state becomes active.
