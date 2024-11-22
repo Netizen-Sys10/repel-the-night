@@ -8,7 +8,7 @@ var mode_stack : Array[Node]
 var current_mode : Node
 var modes : Dictionary = {
 	"main_menu" : load("res://Menu/menu.tscn"),
-	"run" : load("res://Run/run.tscn")
+	"run" : load("res://Levels/Run/run.tscn")
 }
 
 

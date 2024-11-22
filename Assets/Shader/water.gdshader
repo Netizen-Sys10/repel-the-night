@@ -13,7 +13,7 @@ uniform sampler2D fast_noise : repeat_enable;
 //speed at which waves move
 uniform vec2 speed = vec2(0.03, 0.07);
 
-//strength of waves
+//strength of wavesa
 uniform float wave_strength = 0.5;
 
 //scale and zoom parameters for when editor changes (set from script)
