@@ -8,7 +8,8 @@ var scene_stack : Array
 var scenes  : Dictionary = {
 	"TitleMenu" : load("res://Menu/TitleMenu/title_menu.tscn"),
 	"OptionsMenu" : load("res://Menu/OptionsMenu/options_menu.tscn"),
-	"ControlsMenu" : load("res://Menu/ControlsMenu/controls_menu.tscn")
+	"ControlsMenu" : load("res://Menu/ControlsMenu/controls_menu.tscn"),
+	"ProfilesMenu" : load("res://Menu/ProfilesMenu/profiles_menu.tscn")
 	}
 
 
