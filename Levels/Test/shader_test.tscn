@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://cguc2m72i848"]
+[gd_scene load_steps=30 format=3 uid="uid://cguc2m72i848"]
 
 [ext_resource type="Texture2D" uid="uid://c7jsv1he8agq3" path="res://Levels/Common/Dirt_v2.png" id="1_3xfu6"]
 [ext_resource type="Texture2D" uid="uid://d2hskekkkds5l" path="res://Levels/Common/Grass.png" id="2_m88nh"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://hq3tv66apuif" path="res://Levels/Common/Tileset.png" id="9_fvuyn"]
 [ext_resource type="Texture2D" uid="uid://8arpl0e3r0ii" path="res://Levels/Common/Custom Fires-Mild.png" id="10_jc0cn"]
 [ext_resource type="Texture2D" uid="uid://bkwi3gc424acj" path="res://Levels/Common/sword.png" id="10_mgbor"]
+[ext_resource type="Texture2D" uid="uid://ogt1i6wdxrsy" path="res://Levels/Common/grass Background.png" id="11_ffwge"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_b1ksg"]
 
@@ -124,9 +125,16 @@ animations = [{
 }]
 
 [node name="Test" type="Node2D"]
+position = Vector2(1, 0)
 
 [node name="Grass" type="Sprite2D" parent="."]
+z_index = 2
 position = Vector2(226, 214)
+texture = ExtResource("2_m88nh")
+
+[node name="Grass2" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(-20, 214)
 texture = ExtResource("2_m88nh")
 
 [node name="PineTree" type="Sprite2D" parent="."]
@@ -142,6 +150,7 @@ texture = SubResource("CanvasTexture_vy456")
 script = ExtResource("5_eryhf")
 
 [node name="Player" parent="." instance=ExtResource("6_0f33p")]
+z_index = 15
 position = Vector2(84, 208)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -151,6 +160,37 @@ position = Vector2(45, 232)
 texture = ExtResource("1_3xfu6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
+shape = SubResource("RectangleShape2D_q0ee6")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="."]
+position = Vector2(-147, 232)
+
+[node name="DirtV3" type="Sprite2D" parent="StaticBody2D5"]
+texture = ExtResource("1_3xfu6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5"]
+visible = false
+shape = SubResource("RectangleShape2D_q0ee6")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="."]
+position = Vector2(-338, 232)
+
+[node name="DirtV3" type="Sprite2D" parent="StaticBody2D6"]
+texture = ExtResource("1_3xfu6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6"]
+visible = false
+shape = SubResource("RectangleShape2D_q0ee6")
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="."]
+position = Vector2(-530, 232)
+
+[node name="DirtV3" type="Sprite2D" parent="StaticBody2D7"]
+texture = ExtResource("1_3xfu6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7"]
+visible = false
 shape = SubResource("RectangleShape2D_q0ee6")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
@@ -160,6 +200,7 @@ position = Vector2(237, 232)
 texture = ExtResource("1_3xfu6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+visible = false
 shape = SubResource("RectangleShape2D_q0ee6")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
@@ -169,6 +210,7 @@ position = Vector2(429, 232)
 texture = ExtResource("1_3xfu6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+visible = false
 shape = SubResource("RectangleShape2D_q0ee6")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="."]
@@ -178,6 +220,27 @@ position = Vector2(621, 232)
 texture = ExtResource("1_3xfu6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+visible = false
+shape = SubResource("RectangleShape2D_q0ee6")
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="."]
+position = Vector2(813, 232)
+
+[node name="DirtV3" type="Sprite2D" parent="StaticBody2D8"]
+texture = ExtResource("1_3xfu6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D8"]
+visible = false
+shape = SubResource("RectangleShape2D_q0ee6")
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="."]
+position = Vector2(1005, 232)
+
+[node name="DirtV3" type="Sprite2D" parent="StaticBody2D9"]
+texture = ExtResource("1_3xfu6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D9"]
+visible = false
 shape = SubResource("RectangleShape2D_q0ee6")
 
 [node name="Sky" type="Sprite2D" parent="."]
@@ -219,5 +282,36 @@ frame_progress = 0.655764
 z_index = -1
 position = Vector2(188, 205)
 texture = ExtResource("10_mgbor")
+
+[node name="GrassBackground" type="Sprite2D" parent="."]
+visible = false
+z_index = -10
+position = Vector2(261, 212)
+texture = ExtResource("11_ffwge")
+
+[node name="GrassBackground2" type="Sprite2D" parent="."]
+visible = false
+z_index = -10
+position = Vector2(-379, 212)
+texture = ExtResource("11_ffwge")
+
+[node name="GrassBackground3" type="Sprite2D" parent="."]
+visible = false
+z_index = -10
+position = Vector2(901, 212)
+texture = ExtResource("11_ffwge")
+
+[node name="Tileset4" type="Sprite2D" parent="."]
+position = Vector2(-177, 211)
+texture = ExtResource("9_fvuyn")
+region_enabled = true
+region_rect = Rect2(114, 125, 61, 19)
+
+[node name="Tileset5" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(-208, 201)
+texture = ExtResource("9_fvuyn")
+region_enabled = true
+region_rect = Rect2(225, 201, 63, 39)
 
 [connection signal="item_rect_changed" from="Water" to="Water" method="_on_item_rect_changed"]
